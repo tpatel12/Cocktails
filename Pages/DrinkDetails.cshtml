@@ -1,0 +1,49 @@
+﻿@page
+@model tushar.Pages.DrinkDetailsModel
+@{
+    ViewData["Title"] = "Drinks Details Page";
+}
+<head>
+    <style>
+        .thumbnailImage{
+            margin: 50px;
+            height: 300px;
+        }
+    </style>
+</head>
+
+
+<a asp-area="" asp-page="/Cocktail"> Back To Drink List</a>
+<br />
+<br />
+
+<h1>@Model.drink.name</h1>
+
+<img src="@Model.drink.imageSource" class="thumbnailImage"/>
+
+<h4>Recipe</h4>
+
+<table class="table mt-5">
+    <thead>
+        <tr>
+            <th scope="col">Ingredient Name</th>
+            <th scope="col">Quantity</th>
+        </tr>
+    </thead>
+
+    @foreach (string ingredient in Model.drink.ingredients)
+    {
+        <tr>
+            <td>@ingredient</td>
+            <td><i>@Model.drink.ingredientMeasures[ingredient] </i></td>
+        </tr>
+
+    }
+
+</table>
+
+@if (Model.drink.instructions != null)
+{
+    <p><b>Instructions: </b> @Model.drink.instructions</p>
+}
+

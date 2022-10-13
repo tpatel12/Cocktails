@@ -1,0 +1,100 @@
+﻿@page
+@model tushar.Pages.CocktailModel
+@{
+    ViewData["Title"] = "Cocktail Page";
+}
+<h1>@ViewData["Title"]</h1>
+<h4>Use the following list to select what ingredients you have available, and click update to see the results</h4>
+
+<head>
+    <style>
+        .spacing {
+            margin-right: 20px;
+        }
+    </style>
+</head>
+
+@*<form method="post" asp-page-handler="Update" asp-route-id="abc">
+    <table class="table mt-5">
+        <thead>
+            <tr>
+                <th scope="col">Ingredient</th>
+                <th scope="col">In Stock?</th>
+            </tr>
+        </thead>
+        @foreach (var item in Model.inventory.ingredients)
+        {
+            <tr>
+                <td>@item.Key</td>
+                <td>
+                    <input id="item-@item.Key" type="checkbox" name="item-@item.Key" value="@item.Value" checked="@item.Value" />
+                </td>
+            </tr>
+        }
+    </table>
+
+    <button class="btn btn-danger">Update</button>
+</form>*@
+
+<form method="post">
+    @foreach (var item in Model.inventory.ingredients)
+    {
+
+        <span class="spacing">
+            <label class="checkbox-inline">
+                <input id="item-@item.Key" type="checkbox" name="item-@item.Key" checked="@item.Value" />
+                @item.Key
+            </label>
+        </span>
+
+    }
+
+    <br />
+    <button class="btn btn-danger" asp-page-handler="Update">Update</button>
+    <button class="btn btn-danger" asp-page-handler="SelectAll">Select All</button>
+    <button class="btn btn-danger" asp-page-handler="UnselectAll">Unselect All</button>
+</form>
+
+
+    <table class="table mt-5">
+        @*<thead>
+                <tr>
+                    <th scope="col">Name</th>
+                    <th scope="col">id</th>
+                </tr>
+            </thead>*@
+        @foreach (var drink in Model.inventory.drinks)
+        {
+            <tr>
+                <td>@drink.name</td>
+                <td>
+                    <i class="redtext"><b>Missing:</b> @Model.inventory.getMissingIngredientsString(drink) </i>
+                </td>
+                <td>
+                    <img src="@drink.imageSourcePreview">
+                </td>
+                @*<td>
+                        <form method="post" asp-page-handler="Details" asp-route-id="@drink.id">
+                            <button class="btn btn-danger">Details</button>
+                        </form>
+                    </td>*@
+                <td>  <a asp-area="" asp-route-drinkid="@drink.id" asp-page="/DrinkDetails"> Details</a> </td>
+
+
+            </tr>
+
+            @if (Model.openedDrinkId.HasValue && drink.id == Model.openedDrinkId)
+            {
+                <tr>
+                    <td colspan="2">
+                        <p>@drink.instructions</p>
+                        <br />
+                        <img src="@drink.imageSource" />
+                    </td>
+                </tr>
+
+            }
+
+        }
+    </table>
+

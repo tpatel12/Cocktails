@@ -1,0 +1,61 @@
+﻿<Properties StartupConfiguration="{52F6417C-03AC-4E57-B644-470E1BF04BDF}|Default">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Pages/Cocktail.cshtml.cs">
+    <Files>
+      <File FileName="Inventory.cs" Line="30" Column="14" />
+      <File FileName="APIClient.cs" Line="114" Column="1" />
+      <File FileName="URLRequest.cs" Line="12" Column="10" />
+      <File FileName="ViewModel.cs" Line="11" Column="49" />
+      <File FileName="Pages/DrinkDetails.cshtml.cs" Line="16" Column="1" />
+      <File FileName="Pages/DrinkDetails.cshtml" Line="12" Column="13" />
+      <File FileName="Pages/Shared/_Layout.cshtml" Line="40" Column="13" />
+      <File FileName="Program.cs" Line="25" Column="1" />
+      <File FileName="Pages/Cocktail.cshtml" Line="46" Column="19" />
+      <File FileName="Pages/Cocktail.cshtml.cs" Line="65" Column="6" />
+      <File FileName="DrinkDetailsViewModel.cs" Line="28" Column="64" />
+      <File FileName="Pages/Index.cshtml" Line="12" Column="1" />
+      <File FileName="Pages/Index.cshtml.cs" Line="20" Column="1" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="tushar" expanded="True">
+            <Node name="tushar" expanded="True">
+              <Node name="Pages" expanded="True">
+                <Node name="Shared" expanded="True" />
+                <Node name="Cocktail.cshtml" expanded="True">
+                  <Node name="Cocktail.cshtml.cs" selected="True" />
+                </Node>
+                <Node name="DrinkDetails.cshtml" expanded="True" />
+                <Node name="Index.cshtml" expanded="True" />
+              </Node>
+              <Node name="wwwroot" expanded="True">
+                <Node name="css" expanded="True" />
+              </Node>
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+      <Pad Id="MonoDevelop.Debugger.WatchPad">
+        <State>
+          <Value>Model.inventory.getMissingIngredientsString(drink)</Value>
+          <Value>Model.inventory.getMissingIngredients(drink)</Value>
+          <Value>Request.Form["item-Ale"]</Value>
+          <Value>Request.</Value>
+          <Value>inventory.ingredients[ingredient]</Value>
+          <Value>form["item-" + ingredient]</Value>
+          <Value>form["item-Light Rum"]</Value>
+          <Value>ingredient</Value>
+          <Value>Model.drink.instructions</Value>
+          <Value>Model.drink.ingredientMeasures</Value>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.ItemProperties.tushar PreferredExecutionTarget="/Applications/Google Chrome.app" />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MultiItemStartupConfigurations />
+</Properties>
